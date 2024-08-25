@@ -7,13 +7,13 @@ const Header = () => {
   return (
     <>
       <nav className="bg-slate-100 flex justify-center items-center">
-        <div className="container px-3 py-3 ">
+        <div className="container px-3 py-3 border-b-2 border-black">
           <div className="flex flex-row  justify-between items-center p-3">
               <div className="flex justify-start items-center basis-1/4">
                 <FaPhoneAlt />
                 <p className="text-sm ml-2">+90 5555 555 5555</p>
               </div>
-              <div className="flex justify-end items-center basis-1/4">
+              <div className="flex justify-end ml-12 items-center basis-1/4">
                 <img src={logo} className="p-2" alt="" />
               </div>
               <div className="flex justify-end items-center basis-1/2">
