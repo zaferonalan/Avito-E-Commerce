@@ -1,7 +1,12 @@
+import { useState } from "react";
 import product1 from "../assets/images/product-1.jpg";
 import {FaShoppingCart,FaHeart,FaSearch } from "react-icons/fa";
 
 const Cart = () => {
+    const [count, setCount] = useState(0)
+    const hadleClick = () => {
+        setCount(count + 1)
+    }
   return (
     <div className="bg-gray-200">
         <img className="transition-transform ease-in-out transform hover:scale-110" src={product1} alt="" />
