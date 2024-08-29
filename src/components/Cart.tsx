@@ -1,6 +1,7 @@
 import product1 from "../assets/images/product-1.jpg";
 import {FaShoppingCart,FaHeart,FaSearch } from "react-icons/fa";
-import { useCount } from "../context/CounterContext";
+import { useCount } from "../hooks/CounterHokk";
+
 
 
 const Cart = () => {

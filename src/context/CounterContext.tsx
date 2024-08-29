@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, ReactNode, } from "react"
+import { createContext, useState, ReactNode, } from "react"
 
 //! 1. Context oluşturma
 interface CounterContextProps {
@@ -8,7 +8,7 @@ interface CounterContextProps {
     incrementWhislist: () => void;
 }
 
-const CountContext =  createContext<CounterContextProps | undefined>(undefined)
+export const CountContext =  createContext<CounterContextProps | undefined>(undefined)
 
 //! 2. Provider bileşeni
 export const CountProvider = ({children}:{children:ReactNode}) => {
@@ -24,15 +24,3 @@ export const CountProvider = ({children}:{children:ReactNode}) => {
             </CountContext.Provider>
         )
 }
-
-
-
-//! 3. Custom hook (Kolay kullanım için)
-export const useCount = () =>{
-    const context = useContext(CountContext);
-    if (!context) {
-        throw new Error("useCount bir CountProvider içinde kullanılmalıdır")
-        
-    }
-    return context;
-} 

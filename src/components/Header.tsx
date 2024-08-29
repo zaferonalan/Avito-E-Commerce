@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 import logo from "../assets/images/logo.png";
 import { FaPhoneAlt,FaShoppingCart,FaHeart,FaSearch } from "react-icons/fa";
-import { useCount } from "../context/CounterContext";
+import { useCount } from "../hooks/CounterHokk";
+
 
 const Header = () => {
 
