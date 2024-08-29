@@ -1,8 +1,11 @@
 import { Link } from "react-router-dom";
 import logo from "../assets/images/logo.png";
 import { FaPhoneAlt,FaShoppingCart,FaHeart,FaSearch } from "react-icons/fa";
+import { useCount } from "../context/CounterContext";
 
 const Header = () => {
+
+  const {countShop,countWhis} = useCount()
 
   return (
     <>
@@ -21,14 +24,14 @@ const Header = () => {
                   <li className="relative" >
                     <Link className="hover:bg-black flex items-center gap-1 hover:text-white p-2 rounded" to={"/shop"}><FaShoppingCart/> Shop</Link>
                     <span className="absolute top-0 right-12 inline-flex items-center justify-center w-5 h-5 text-xs font-bold leading-none text-white bg-red-600 rounded-full transform translate-x-1/2 -translate-y-1/2">
-                        3 {/* Bu sayı dinamik olarak değişir */}
+                        {countShop}
                     </span>
                   </li>
                     
                   <li className="relative">
                     <Link className="hover:bg-black flex items-center gap-1 hover:text-white p-2 rounded" to={"/whisList"}> <FaHeart/>WhisList</Link>
                     <span className="absolute top-0 right-[70px] inline-flex items-center justify-center w-5 h-5 text-xs font-bold leading-none text-white bg-red-600 rounded-full transform translate-x-1/2 -translate-y-1/2">
-                        3 {/* Bu sayı dinamik olarak değişir */}
+                      {countWhis}
                     </span>
                   </li>
                   <li className="flex">

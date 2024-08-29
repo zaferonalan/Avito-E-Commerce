@@ -1,12 +1,11 @@
-import { useState } from "react";
 import product1 from "../assets/images/product-1.jpg";
 import {FaShoppingCart,FaHeart,FaSearch } from "react-icons/fa";
+import { useCount } from "../context/CounterContext";
+
 
 const Cart = () => {
-    const [count, setCount] = useState(0)
-    const hadleClick = () => {
-        setCount(count + 1)
-    }
+    const {incrementShop,incrementWhislist} = useCount()
+
   return (
     <div className="bg-gray-200">
         <img className="transition-transform ease-in-out transform hover:scale-110" src={product1} alt="" />
@@ -19,12 +18,12 @@ const Cart = () => {
             </div>
         </div>
         <div className="flex justify-center  items-center border border-black">
-            <button>
+            <button onClick={incrementShop}>
                 <div className=" p-4 hover:bg-black hover:text-white">
                     <FaShoppingCart/>
                 </div>
             </button>
-            <button>
+            <button onClick={incrementWhislist}>
                 <div className="p-4 hover:bg-black hover:text-white">
                     <FaHeart/>
                 </div>
